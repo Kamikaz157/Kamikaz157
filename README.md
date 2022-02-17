@@ -1,10 +1,14 @@
-- 👋 Hi, I’m @Kamikaz157
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+REM
+REM Example bat file for starting PhoenixMiner.exe to mine ETC
+REM
 
-<!---
-Kamikaz157/Kamikaz157 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+setx GPU_FORCE_64BIT_PTR 0
+setx GPU_MAX_HEAP_SIZE 100
+setx GPU_USE_SYNC_OBJECTS 1
+setx GPU_MAX_ALLOC_PERCENT 100
+setx GPU_SINGLE_ALLOC_PERCENT 100
+
+REM IMPORTANT: Replace the ETC address with your own ETC wallet address in the -wal option (Rig001 is the name of the rig)
+PhoenixMiner.exe -pool ethash.poolbinance.com:1800 -wal etash1533 - daglim 4200
+
+
